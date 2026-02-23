@@ -11,50 +11,179 @@
     <a href="vendas.html">View Products</a>
 </body>
 </html>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+        }
+        
+        nav a {
+            color: white;
+            margin-right: 2rem;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: #00bfff;
+        }
+        
+        .banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .price {
+            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        button {
+            background-color: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        button:hover {
+            background-color: #764ba2;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🖥️ TechStore</h1>
+            <p>Sua loja de confiança em Tecnologia da Informação</p>
+        </div>
+    </header>
     
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+    <nav class="container">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <!-- redireciona para a página de contato -->
+        <a href="entrecontato.html">Contato</a>
+    </nav>
     
-    h1 {
-        color: #fff;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+    <div class="banner">
+        <div class="container">
+            <h2>Bem-vindo à TechStore!</h2>
+            <p>Os melhores produtos de T.I com os melhores preços</p>
+        </div>
+    </div>
     
-    p {
-        color: #f0f0f0;
-        font-size: 1.1em;
-        margin-bottom: 30px;
-    }
+    <main class="container">
+        <h2>Produtos Destaque</h2>
+        <div class="products">
+            <div class="product-card">
+                <h3>Mouse Gamer</h3>
+                <p>Mouse de alta precisão com RGB</p>
+                <div class="price">R$ 89,90</div>
+                <button>Comprar</button>
+            </div>
+            
+            <div class="product-card">
+                <h3>Teclado Mecânico</h3>
+                <p>Teclado mecânico RGB com Switches</p>
+                <div class="price">R$ 299,90</div>
+                <button>Comprar</button>
+            </div>
+            
+            <div class="product-card">
+                <h3>Monitor 27"</h3>
+                <p>Monitor Full HD 144Hz para gaming</p>
+                <div class="price">R$ 899,90</div>
+                <button>Comprar</button>
+            </div>
+            
+            <div class="product-card">
+                <h3>Headset Wireless</h3>
+                <p>Headset com cancelamento de ruído</p>
+                <div class="price">R$ 249,90</div>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </main>
     
-    a {
-        display: inline-block;
-        padding: 12px 30px;
-        background-color: #fff;
-        color: #667eea;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    
-    a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-</style>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
